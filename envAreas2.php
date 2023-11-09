@@ -7,4 +7,4 @@ echo "PHP recibió: " . $datos;
 
 
 <br>
-<input class="buttonCancel" type="button" value="Cancelar" onclick="location.href='areas.php'">sdlk
+<input class="buttonCancel" type="button" value="Cancelar" onclick="location.href='areas.php'">
