@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prueba de encabezado</title>
+</head>
+<style type="text/css">
+	body {
+    font-family: Arial, sans-serif;
+}
+	.header {
+		width: 100%;
+	    background-color: #fff; /* Color de fondo */
+	    color: #fff; /* Color del texto */
+	    padding: 1px; /* Espacio interior */
+	    display: flex; /* Usamos flexbox para alinear elementos */
+	    justify-content: space-between; /* Alineación horizontal */
+	    align-items: center; /* Alineación vertical */
+	}
+
+	/* Estilo para el logotipo */
+	.logo {
+	    width: 140px; /* Ancho del logotipo */
+	    height: auto; /* Altura automática para mantener la proporción */
+	}
+
+	/* Estilo para el reloj y la fecha */
+	.clock {
+	    font-size: 18px; /* Tamaño de fuente */
+	    background-color: #04aa6d; /* Color de fondo del reloj */
+	    padding: 5px 10px; /* Espacio interior del reloj */
+	    border-radius: 5px; /* Borde redondeado */
+	}
+</style>
+<body>
+	    <div class="header">
+        <div>
+            <img src="logoaguida.jpg" alt="LogoAguida" class="logo">
+        </div>
+        <div class="clock" id="clock">
+            <!-- Hora y Fecha -->
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar la hora y la fecha actual
+        function displayTime() {
+            const now = new Date();
+            const clockElement = document.getElementById('clock');
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const formattedTime = now.toLocaleDateString('es-ES', options);
+            clockElement.textContent = formattedTime;
+        }
+
+        // Actualizar la hora y la fecha cada segundo
+        setInterval(displayTime, 1000);
+
+        // Mostrar la hora y la fecha al cargar la página
+        displayTime();
+    </script>
+</body>
+</html>
