@@ -59,14 +59,16 @@ echo "se realizó exitosamente la conexion a la base de datos"
             // Realiza una solicitud AJAX después de seleccionar
             var datos = event.target.value;
 
-            $.ajax({
-                type: "POST",
-                url: "envAreas2.php",
-                data: { datos: datos },
-                success: function(response) {
-                    console.log("Respuesta del servidor: " + response);
-                }
-            });
+console.log(datos);
+$.ajax({
+    type: "POST",
+    url: "envAreas2.php",
+    data: { datos: datos },
+    success: function(response) {
+        console.log("Respuesta del servidor: " + response);
+    }
+});
+
         });
     });
 </script>

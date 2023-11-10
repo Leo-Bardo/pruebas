@@ -1,10 +1,10 @@
 <?php
-$datos = $_POST['datos'];
+if (isset($_POST['seleccionArea'])) {
+    $seleccionArea = $_POST['seleccionArea'];
+    echo $seleccionArea;
+    // Resto del código
+} else {
+    echo "Error: La clave 'seleccionArea' no está presente en la solicitud POST.";
+}
 
-// Realiza alguna operación con la variable
-echo "PHP recibió: " . $datos;
 ?>
-
-
-<br>
-<input class="buttonCancel" type="button" value="Cancelar" onclick="location.href='areas.php'">
