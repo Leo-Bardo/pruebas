@@ -24,4 +24,4 @@ echo "se realizó exitosamente la conexion a la base de datos"
 	<h1><div class="resultado-area"></div></h1>
 	        
 </body>
-</html>
+</html>este es un ejemplo de commit para la compatibilidad de las cuentas en git
