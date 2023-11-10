@@ -8,3 +8,4 @@ echo "PHP recibió: " . $datos;
 
 <br>
 <input class="buttonCancel" type="button" value="Cancelar" onclick="location.href='areas.php'">
+ioisjfafoiijsdf

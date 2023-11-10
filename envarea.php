@@ -1,4 +1,4 @@
-<?php
+sdf<?php
 // Verificar si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Incluir el archivo de conexión

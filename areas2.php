@@ -72,13 +72,6 @@ echo "se realizó exitosamente la conexion a la base de datos"
 </script>
 </form>
 
-
-
-
-
-
-
-
 <!-- 
     <script>
         const selectArea = document.querySelectorAll(".claseArea");
