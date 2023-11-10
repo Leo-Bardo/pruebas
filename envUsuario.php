@@ -11,15 +11,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $contrasena = $_POST["contrasena"];
     $nombre = $_POST["nombre"];
+// OBTENER FECHA Y ALMACENARLA EN LA VARIABLE fecha
+    date_default_timezone_set('America/Mexico_City');
+    $fecha = date("Y-m-d");
+    $hora = date("h:i:s");
+    
+    $concatFecha = date("Ymd");
+    $concatHora = date("his");
+
+    $codigoUsuario = $usuario . $nombre . $concatFecha . $concatHora;
+
 
     // Preparar la consulta SQL
-    $sql = "INSERT INTO usuarios (usuario, contrasena, nombre) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO usuarios (usuario, codigoUsuario, contrasena, nombre, fecha, hora) VALUES (?, ?, ?, ?, ?, ?)";
 
     // Preparar la sentencia
     $stmt = $con->prepare($sql);
 
     // Enlazar parámetros
-    $stmt->bind_param("sss", $usuario, $contrasena, $nombre);
+    $stmt->bind_param("ssssss", $usuario, $codigoUsuario, $contrasena, $nombre, $fecha, $hora);
 
     // Ejecutar la consulta
     if ($stmt->execute()) {

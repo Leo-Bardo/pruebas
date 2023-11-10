@@ -15,6 +15,23 @@ echo "se realizó exitosamente la conexion a la base de datos"
 </head>
 <body>
     <h2>Conexión PHP Mysql</h2>
+
+
+
+    <h1>
+        <?php
+    date_default_timezone_set('America/Mexico_City');
+    $fechaActual = date("Y-m-d");
+
+    $horaActual = date("h:i:s");
+
+    echo "La fecha es: $fechaActual y la hora es $horaActual " ;
+    ?>
+    </h1>
+
+
+
+
     <form action="envUsuario.php" method="POST">
         <label for="nombreRol">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br><br>
