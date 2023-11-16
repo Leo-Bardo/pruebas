@@ -22,7 +22,9 @@
 }
 
 /* Estilo para el botón de cerrar */
-.close-button {
+.loginControl {
+    margin-top: 10px;
+
     background-color: #ccc;
     padding: 8px 12px;
     border: none;
