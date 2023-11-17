@@ -1,15 +1,16 @@
-<?php
+<?php 
 include("../conexion.php");
 
 $con = conectar();
 echo "Conexion exitosa";
 
-$sql = "SELECT idContinente, continente FROM continentes";
-$resultadoContinente = $con->query($sql);
+    $sql = "SELECT idContinente, continente FROM continentes";
+    $resultadoContinente = $con->query($sql);
 
-// Otras consultas y lógica según sea necesario...
+    // $sql = "SELECT idPais, pais FROM paises";
+    // $resultadoPais = $con->query($sql);
+
 ?>
-
 <br>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@ $resultadoContinente = $con->query($sql);
     <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <label for="continentes">Selecciona Continente:</label>
+    <label for="continentes">selec Continente:</label>
     <select id="continentes">
         <option value="">Selecciona un Continente</option>
         <?php
@@ -34,8 +35,18 @@ $resultadoContinente = $con->query($sql);
 
     <label for="paises">Países:</label>
     <select id="paises" disabled>
-        <option value="">Selecciona un País</option>
-    </select>
+
+                <option value="">Selecciona un Pais</option>
+
+                <?php
+                // if ($resultadoPais->num_rows > 0) {
+                //     while ($fila = $resultadoPais->fetch_assoc()) {
+                //         echo "<option value='" . $fila["idpais"] . "'>" . $fila["pais"] . "</option>";
+                //     }
+                // }
+                ?>
+     </select>
+
 
     <script>
         $(document).ready(function () {
@@ -46,11 +57,9 @@ $resultadoContinente = $con->query($sql);
                 dataType: 'json',
                 success: function (continentes) {
                     // Procesar y mostrar los datos de continentes
-                    console.log('Datos de continentes:', continentes);
-
                     var selectContinentes = $('#continentes');
                     continentes.forEach(function (continente) {
-                        selectContinentes.append('<option value="' + continente.idContinente + '">' + continente.continente + '</option>');
+                        selectContinentes.append('<option value="' + continente + '">' + continente + '</option>');
                     });
 
                     // Habilitar la selección de países después de cargar los continentes
@@ -72,13 +81,11 @@ $resultadoContinente = $con->query($sql);
                     dataType: 'json',
                     success: function (paises) {
                         // Procesar y mostrar los datos de países
-                        console.log('Datos de países:', paises);
-
                         var selectPaises = $('#paises');
                         selectPaises.empty().prop('disabled', paises.length === 0);
 
                         paises.forEach(function (pais) {
-                            selectPaises.append('<option value="' + pais.idPais + '">' + pais.pais + '</option>');
+                            selectPaises.append('<option value="' + pais.nombre + '">' + pais.nombre + '</option>');
                         });
                     },
                     error: function (error) {
@@ -90,3 +97,35 @@ $resultadoContinente = $con->query($sql);
     </script>
 </body>
 </html>
+
+
+
+
+
+
+<form action="" method="get" accept-charset="utf-8">
+    <label>Elija un Continente:
+    <select class="continente" name="continente">
+                <option value="">Selecciona un Continente</option>
+                <?php
+                if ($resultadoContinente->num_rows > 0) {
+                    while ($fila = $resultadoContinente->fetch_assoc()) {
+                        echo "<option value='" . $fila["idContinente"] . "'>" . $fila["continente"] . "</option>";
+                    }
+                }
+                ?>
+  </select>
+<br>
+    <label>Elija un Pais:
+    <select class="pais" name="pais">
+                <option value="">Selecciona un Pais</option>
+                <?php
+                if ($resultadoPais->num_rows > 0) {
+                    while ($fila = $resultadoPais->fetch_assoc()) {
+                        echo "<option value='" . $fila["idpais"] . "'>" . $fila["pais"] . "</option>";
+                    }
+                }
+                ?>
+  </select>
+</label>
+</form>
