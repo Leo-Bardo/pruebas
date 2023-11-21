@@ -39,21 +39,21 @@ $resultadoCliente = $con->query($sql);
 
     <script>
         $(document).ready(function () {
-            // Hacer una solicitud a la API para obtener continentes
+            // Hacer una solicitud a la API para obtener clientes
             $.ajax({
-                url: 'api.php',
+                url: '_api.php',
                 type: 'GET',
                 dataType: 'json',
                 success: function (clientes) {
-                    // Procesar y mostrar los datos de continentes
-                    console.log('Datos de clientes:', continentes);
+                    // Procesar y mostrar los datos de clientes
+                    console.log('Datos de clientes:', clientes);
 
-                    var selectContinentes = $('#clientes');
-                    continentes.forEach(function (cliente) {
-                        selectContinentes.append('<option value="' + clientes.idCliente + '">' + cliente.cliente + '</option>');
+                    var selectCliente = $('#clientes');
+                    clientes.forEach(function (cliente) {
+                        selectCliente.append('<option value="' + cliente.idCliente + '">' + cliente.cliente + '</option>');
                     });
 
-                    // Habilitar la selección de países después de cargar los continentes
+                    // Habilitar la selección de productos después de cargar los clientes
                     $('#clientes').prop('disabled', false);
                 },
                 error: function (error) {
@@ -61,28 +61,28 @@ $resultadoCliente = $con->query($sql);
                 }
             });
 
-            // Manejar el cambio en la selección de continentes
+            // Manejar el cambio en la selección de clientes
             $('#clientes').on('change', function () {
                 var clienteSeleccionado = $(this).val();
 
-                // Hacer una solicitud a la API para obtener países por continente
+                // Hacer una solicitud a la API para obtener productos por cliente
                 $.ajax({
-                    url: 'api.php?cliente=' + clienteSeleccionado,
+                    url: '_api.php?cliente=' + clienteSeleccionado,
                     type: 'GET',
                     dataType: 'json',
                     success: function (productos) {
-                        // Procesar y mostrar los datos de países
+                        // Procesar y mostrar los datos de productos
                         console.log('Datos de productos:', productos);
 
-                        var selectProductos = $('#paises');
+                        var selectProductos = $('#productos');
                         selectProductos.empty().prop('disabled', productos.length === 0);
 
-                        paises.forEach(function (pais) {
-                            selectProductos.append('<option value="' + pais.idPais + '">' + producto.producto + '</option>');
+                        productos.forEach(function (producto) {
+                            selectProductos.append('<option value="' + producto.idProductos + '">' + producto.producto + '</option>');
                         });
                     },
                     error: function (error) {
-                        console.error('Error al obtener datos de países:', error);
+                        console.error('Error al obtener datos de productos:', error);
                     }
                 });
             });

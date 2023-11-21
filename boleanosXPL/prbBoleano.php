@@ -1,10 +1,3 @@
-<?php
-include("../conexion.php");
-
-$con=conectar();
-
-echo "se realizó exitosamente la conexion a la base de datos"
-?>
 
 <!DOCTYPE html>
 <html lang="es">

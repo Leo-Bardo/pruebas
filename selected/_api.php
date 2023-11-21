@@ -3,16 +3,17 @@ include("../conexion.php");
 
 $con = conectar();
 
-if (isset($_GET['continente'])) {
-    $continente = $con->real_escape_string($_GET['continente']);
+if (isset($_GET['cliente'])) {
+    $cliente = $con->real_escape_string($_GET['cliente']);
 
     // Consulta SQL
-    $sql = "SELECT idPais, pais FROM paises WHERE continente = '$continente'";
+    $sql = "SELECT idproducto, producto FROM productos WHERE idCliente = '$cliente'";
+
 
     // Ejecutar la consulta y manejar errores
-    $resultadoPais = $con->query($sql);
+    $resultadoProducto = $con->query($sql);
 
-    if (!$resultadoPais) {
+    if (!$resultadoProducto) {
         header("HTTP/1.1 500 Internal Server Error");
         echo "Error en la consulta SQL: " . $con->error;
         exit();
@@ -20,8 +21,8 @@ if (isset($_GET['continente'])) {
 
     // Procesar resultados y enviar JSON
     $data = [];
-    if ($resultadoPais->num_rows > 0) {
-        while ($row = $resultadoPais->fetch_assoc()) {
+    if ($resultadoProducto->num_rows > 0) {
+        while ($row = $resultadoProducto->fetch_assoc()) {
             $data[] = $row;
         }
     }
@@ -30,7 +31,7 @@ if (isset($_GET['continente'])) {
     echo json_encode($data);
 } else {
     header("HTTP/1.1 400 Bad Request");
-    echo "Parámetro 'continente' no proporcionado";
+    echo "Parámetro 'cliente' no proporcionado";
 }
 
 // Cerrar la conexión
