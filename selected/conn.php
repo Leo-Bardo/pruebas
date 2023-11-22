@@ -7,7 +7,7 @@ if (isset($_GET['cliente'])) {
     $cliente = $con->real_escape_string($_GET['cliente']);
 
     // Consulta SQL
-    $sql = "SELECT idproducto, producto FROM productos WHERE idCliente = '$cliente'";
+    $sql = "SELECT idproducto, producto FROM productos WHERE cliente = '$cliente'";
 
 
     // Ejecutar la consulta y manejar errores
@@ -36,3 +36,4 @@ if (isset($_GET['cliente'])) {
 
 // Cerrar la conexión
 $con->close();
+?>

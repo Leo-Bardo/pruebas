@@ -35,3 +35,4 @@ if (isset($_GET['continente'])) {
 
 // Cerrar la conexión
 $con->close();
+?>

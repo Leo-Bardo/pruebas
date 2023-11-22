@@ -6,10 +6,7 @@ echo "Conexion exitosa";
 
 $sql = "SELECT idcliente, cliente FROM clientes";
 $resultadoCliente = $con->query($sql);
-
-// Otras consultas y lógica según sea necesario...
 ?>
-
 <br>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,10 +35,12 @@ $resultadoCliente = $con->query($sql);
     </select>
 
     <script>
+
+
         $(document).ready(function () {
             // Hacer una solicitud a la API para obtener clientes
             $.ajax({
-                url: '_api.php',
+                url: 'conn.php',
                 type: 'GET',
                 dataType: 'json',
                 success: function (clientes) {
@@ -67,7 +66,7 @@ $resultadoCliente = $con->query($sql);
 
                 // Hacer una solicitud a la API para obtener productos por cliente
                 $.ajax({
-                    url: '_api.php?cliente=' + clienteSeleccionado,
+                    url: 'conn.php?idCliente=' + clienteSeleccionado,
                     type: 'GET',
                     dataType: 'json',
                     success: function (productos) {
