@@ -28,10 +28,6 @@ echo "se realizó exitosamente la conexion a la base de datos"
     echo "La fecha es: $fechaActual y la hora es $horaActual " ;
     ?>
     </h1>
-
-
-
-
     <form action="envUsuario.php" method="POST">
         <label for="nombreRol">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required><br><br>

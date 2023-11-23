@@ -1,38 +1,59 @@
-
-	        <table >
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <form action="guardaChkBx.php" method="POST">
+            <table>
             <!-- <button id="mostrarHora">Mostrar Hora</button> -->
             <tr>
                 <td class="tipoTanque" colspan="">TANQUE DE PREPARACIÓN</td>
                 <td><label id="horaLabel"></label></td>
             </tr>
-                
-                <tr>
-                    <td colspan="">Ruidos extraños en mecanismo de agitador</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+            <!-- Tomar en cuenta que la propiedad name esta basada en el numero id de la BBDD y a su vez de la posición que tienen en los formatos -->
+                 <tr>
+                    <td colspan="">Revisión de procedimiento de preparación</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral1" value="Item 1" id="c1"></td>
                 </tr>
 
                 <tr>
-                    <td colspan="">Funcionamiento de agitador</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+                    <td colspan="">Liberación de limpieza de equipos a utilizar</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral12" value="Item 1" id="c1"></td>
                 </tr>
 
                 <tr>
-                    <td colspan="">Funcionamiento de bomba</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+                    <td colspan="">Revisión de funcionamiento de Equipos</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral3" value="Item 1" id="c1"></td>
                 </tr>
 
                 <tr>
-                    <td colspan="">Revisión de válvulas sin fugas.</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+                    <td colspan="">Limpieza de utensilio a u</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral4" value="Item 1" id="c1"></td>
                 </tr>
 
                 <tr>
-                    <td colspan="">Revisión de filtro.</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+                    <td colspan="">retiro de utensilios que no corresponden</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral5" value="Item 1" id="c1"></td>
                 </tr>
-
                 <tr>
-                    <td colspan="">Fugas en tanque y tuberias</td>
-                    <td><input type="checkbox" class="cbVerificacion" name="checklist[]" value="Item 1" id="c1"></td>
+                    <td colspan="">orden y limpieza de area</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral6" value="Item 1" id="c1"></td>
+                </tr>
+                <tr>
+                    <td colspan="">Revisión de filtros en linea de proceso</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral7" value="Item 1" id="c1"></td>
+                </tr>
+                <tr>    
+                    <td colspan="">mantener tuberias en deshuso con tapa</td>
+                    <td><input type="checkbox" class="cbVerificacion" name="actGeneral8" value="Item 1" id="c1"></td>
                 </tr>
         </table>
+        <input type="submit"  name="">
+            </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?php
+include("../conexion.php");
+
+$con=conectar();
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Obtener el valor del checkbox
+    $actGeneral1 = isset($_POST['actGeneral1']) ? 1 : 0;
+    $actGeneral2 = isset($_POST['actGeneral2']) ? 1 : 0;
+    $actGeneral3 = isset($_POST['actGeneral3']) ? 1 : 0;
+    $actGeneral4 = isset($_POST['actGeneral4']) ? 1 : 0;
+    $actGeneral5 = isset($_POST['actGeneral5']) ? 1 : 0;
+    $actGeneral6 = isset($_POST['actGeneral6']) ? 1 : 0;
+    $actGeneral7 = isset($_POST['actGeneral7']) ? 1 : 0;
+    $actGeneral8 = isset($_POST['actGeneral8']) ? 1 : 0;
+
+
+    $sql = "INSERT INTO status (status) VALUES (?)";
+
+    $stmt = $con->prepare($sql);
+
+    $stmt->bind_param("iiiiiiii", $aceptado);
+
+    if ($stmt->execute()) {
+        echo "Datos almacenados correctamente en la base de datos.";
+    } else {
+        echo "Error al almacenar datos: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $con->close();
+}
+?>

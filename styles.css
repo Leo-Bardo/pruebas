@@ -1,26 +1,42 @@
-    body {
-        font-family: Arial, sans-serif;
-    }
-    .container {
-        text-align: center;
-        margin-top: 20px;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    .button {
-        display: inline-block;
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .button img {
-        max-width: 100px;
-        max-height: 100px;
-        margin-bottom: 10px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: red;
+/*    text-align: center;*/
+    padding-inline: 20%;
+    padding-top: 15%;
+
+}
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+h1 {
+    font-size: 24px;
+}
+.button {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+}
+table{
+    border: solid white;
+    width: 100%;
+
+
+}
+
+.cbVerificacion{
+        height: 40px;
+    width: 40px;
+}

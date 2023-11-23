@@ -9,6 +9,7 @@
     <form>
         <label for="cliente">Selecciona un cliente:</label>
         <select id="cliente" name="cliente">
+            <option value="">Seleccione un Cliente</option>
             <?php
             // Conexión a la base de datos
             $servername = "localhost";
@@ -35,7 +36,7 @@
         <br><br>
         <label for="producto">Selecciona un producto:</label>
         <select id="producto" name="producto">
-            <option value="">Selecciona un cliente primero</option>
+            <option value="">Seleccione un producto</option>
         </select>
     </form>
     <script>
