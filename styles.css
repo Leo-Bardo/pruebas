@@ -3,7 +3,7 @@ body {
     background-color: red;
 /*    text-align: center;*/
     padding-inline: 20%;
-    padding-top: 15%;
+    padding-top: 10%;
 
 }
 .container {
@@ -30,7 +30,7 @@ h1 {
     margin-bottom: 10px;
 }
 table{
-    border: solid white;
+/*    border: solid white;*/
     width: 100%;
 
 
@@ -39,4 +39,12 @@ table{
 .cbVerificacion{
         height: 40px;
     width: 40px;
+}
+.inputCon input{
+    height: 80px;
+    width: 25%;
+}
+.inputCon{
+/*    border: solid black;*/
+    text-align: center;
 }

@@ -15,11 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $actGeneral8 = isset($_POST['actGeneral8']) ? 1 : 0;
 
 
-    $sql = "INSERT INTO status (status) VALUES (?)";
+    $sql = "INSERT INTO metodo_liberacion_equipos (codigoActividad, actividad, codigoLiberacion, status, usuRealizo, usuVerifico, usuReviso) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $con->prepare($sql);
 
-    $stmt->bind_param("iiiiiiii", $aceptado);
+    $stmt->bind_param("iiiiiiii", $actGeneral1, $actGeneral2, $actGeneral3, $actGeneral4, $actGeneral5, $actGeneral6, $actGeneral7, $actGeneral8);
 
     if ($stmt->execute()) {
         echo "Datos almacenados correctamente en la base de datos.";
@@ -31,3 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $con->close();
 }
 ?>
+
+
+<!-- INSERT INTO `metodo_liberacion_equipos` (`codigoActividad`, `actividad`, `codigoLiberacion`, `status`, `usuRealizo`, `usuVerifico`, `usuReviso`) VALUES ('2', '6', '-14 13 20231123 1148', '1', '6', '6', '32'); -->
