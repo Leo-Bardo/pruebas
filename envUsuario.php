@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $codigoUsuario = $usuario . $nombre . $concatFecha . $concatHora;
 
-
     // Preparar la consulta SQL
     $sql = "INSERT INTO usuarios (usuario, codigoUsuario, contrasena, nombre, fecha, hora) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -45,4 +44,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <br>
 <input class="buttonCancel" type="button" value="Cancelar" onclick="location.href='index.php'">
-
