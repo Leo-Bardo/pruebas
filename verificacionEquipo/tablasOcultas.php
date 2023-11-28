@@ -72,6 +72,36 @@ $resultadoEquipo = $con->query($sql);
             tablaFrame.style.display = "block";
             // Carga la URL correspondiente en el iframe
             tablaFrame.src = "tablas/tblTanqueHolding.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "TANQUE PREMIX") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblTanquePremix.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "HOMOGENIZADOR ALEX") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblHomogenizadorAlex.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "TANQUE DE PREMEZCLA") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblTanquePremezcla.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "MARMITA") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblMarmita.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "CIP") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblCip.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+        } else if (equipoSeleccionado === "xpl1") {
+            // Muestra el iframe
+            tablaFrame.style.display = "block";
+            // Carga la URL correspondiente en el iframe
+            tablaFrame.src = "tablas/tblxpl1.php?equipo=" + encodeURIComponent(equipoSeleccionado);
         } else {
             // Oculta el iframe si no hay equipo seleccionado
             tablaFrame.style.display = "none";

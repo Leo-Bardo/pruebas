@@ -8,6 +8,6 @@
 </head>
 <body>
 	
-	<h1>Aqui se almacena la tabla de TANQUE HOLDING</h1>
+	<h1>Aqui se almacena la tabla de HOMOGENIZADOR ALEX</h1>
 </body>
 </html>

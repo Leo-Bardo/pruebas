@@ -8,6 +8,6 @@
 </head>
 <body>
 	
-	<h1>Aqui se almacena la tabla de tanque de preparación</h1>
+	<h1>Aqui se almacena la tabla de TANQUE DE PREPARACION</h1>
 </body>
 </html>
