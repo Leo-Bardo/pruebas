@@ -15,7 +15,7 @@ $resultadoEquipo = $con->query($sql);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Verificación de Equipos de Preparación</title>
-    <link rel="stylesheet" href="../liberacionArea/css/styles.css">
+    <link rel="stylesheet" href="tablas/css/tblStyle.css">
 </head>
 <body>
     <form action="procesar.php" method="POST">
@@ -94,7 +94,7 @@ $resultadoEquipo = $con->query($sql);
             // Muestra el iframe
             tablaFrame.style.display = "block";
             // Carga la URL correspondiente en el iframe
-            tablaFrame.src = "tablas/tblxpl1.php?equipo=" + encodeURIComponent(equipoSeleccionado);
+            tablaFrame.src = "tablas/tblXpl.php?equipo=" + encodeURIComponent(equipoSeleccionado);
         } else {
             // Oculta el iframe si no hay equipo seleccionado
             tablaFrame.style.display = "none";
