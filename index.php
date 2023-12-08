@@ -14,6 +14,7 @@ echo "se realizó exitosamente la conexion a la base de datos"
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <input type="button" value="LOGIN" onclick="location.href='login'">
     <h2>Conexión PHP Mysql</h2>
 
 
