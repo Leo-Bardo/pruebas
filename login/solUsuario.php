@@ -2,7 +2,7 @@
 include("../conexion.php");
 
 // Verificar si se recibieron datos del formulario
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['form_enviado'])) {
     // Conectar a la base de datos
     $con = conectar();
 
@@ -21,26 +21,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Verificar si se encontró un usuario con esa combinación de usuario y contraseña
             if (mysqli_num_rows($resultado) > 0) {
                 // Obtener información del usuario
+                // Después de verificar el usuario y la contraseña
+                // Obtener el rol del usuario
                 $datosUsuario = mysqli_fetch_assoc($resultado);
+
+                // Después de verificar el usuario y la contraseña
+                // Obtener el rol del usuario
                 $rolUsuario = $datosUsuario["rol"];
 
-                // Redirigir a la página correspondiente según el rol
-                switch ($rolUsuario) {
-                    case "1":
-                        header("Location: admin.php");
-                        break;
-                    case "usuario_normal":
-                        header("Location: usuario_normal.php");
-                        break;
-                    // Agrega más casos según sea necesario
+                // Guardar el rol en una variable de sesión
+                session_start();
+                $_SESSION['rolUsuario'] = $rolUsuario;
 
+                // Redirigir a la página correspondiente según el rol
+                switch ($rolUsuario){
+                    case "1":
+                        header("Location: consulta.php");
+                        exit();
+                    case "2":
+                        header("Location: admin.php");
+                        exit();
+                    // Agrega más casos según sea necesario
                     default:
                         echo "Error: Rol no reconocido";
-                        break;
+                        exit();
                 }
 
-
             } else {
+                // echo "<script>
+                // alert "hola";
+                // </script>";
                 echo "Usuario o contraseña incorrectos";
             }
         } else {
@@ -56,4 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Si no es una solicitud POST, devolver un mensaje de error
     echo "Error: Solicitud no válida";
 }
+
+
 ?>

@@ -1,11 +1,6 @@
 <?php
 include("../conexion.php");
 $con = conectar();
-if($con){
-  echo "Conexion exitosa";
-} else {
-  echo "Conexion Fallida";
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,35 +11,67 @@ if($con){
   <script src="../js/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-  <form id="loginForm">
+  <form action="solUsuario.php" method="POST">
     <div class="formUsuario">
       <label for="usuario">Usuario</label>
-      <input type="text" name="usuario" placeholder="Ingresa Usuario">
+      <input type="text" id="usuario" name="usuario" placeholder="Ingresa Usuario">
       <label for="contrasena">Contraseña</label>
-      <input type="password" name="contrasena" placeholder="Ingresa Contraseña">
-      <button type="button" id="btnIngresar">Ingresar</button>
+      <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa Contraseña">
+      <input type="submit" id="btnIngresar" value="Ingresar">
+          <input type="hidden" name="form_enviado" value="1">
+
     </div>
   </form>
-
-  <script>
-    $(document).ready(function() {
-      $("#btnIngresar").click(function() {
-        var formData = $("#loginForm").serialize();
-
-        $.ajax({
-          type: "POST",
-          url: "solUsuario.php",
-          data: formData,
-          success: function(response) {
-            // Manejar la respuesta del servidor
-            console.log(response);
-          },
-          error: function(error) {
-            console.log("Error en la solicitud AJAX: " + error);
-          }
-        });
-      });
-    });
-  </script>
+ 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- RESERVADO PARA USO POSTERIOR -->
+ <script>
+    // $(document).ready(function() {
+    //   $("#btnIngresar").click(function(event) {
+    //     event.preventDefault(); // Evitar el envío del formulario por defecto
+    //     var formData = $("#loginForm").serialize();
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "solUsuario.php",
+    //       data: formData,
+    //       success: function(response) {
+    //         // Verificar si la respuesta contiene una cadena "Location:"
+    //         if (response.indexOf("Location:") !== -1) {
+    //           var redirectUrl = response.split("Location: ")[1];
+    //           // Redirigir directamente desde JavaScript
+    //           window.location.href = redirectUrl;
+    //         } else {
+    //           // Si no hay redirección, manejar la respuesta del servidor
+    //           console.log(response);
+    //         }
+    //       },
+    //       error: function(error) {
+    //         console.log("Error en la solicitud AJAX: " + error);
+    //       }
+    //     });
+    //   });
+    // });
+  </script>
+  <?php
+  // Imprimir el valor de $response en el cuerpo HTML
+  // if (isset($response)) {
+  //   echo '<script>console.log("' . addslashes($response) . '");</script>';
+  // }
+  ?>
