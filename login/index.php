@@ -20,14 +20,12 @@ else{
 		<script src="../js/jquery-3.7.1.min.js"></script>
 	<script src="script.js"></script>
 	<button id="openModalBtn">Abrir Modal</button>
-
 	<div id="myModal" class="modal">
 	  <div class="modal-content">
 	    <span class="close">&times;</span>
-	    <h1>AQUI VA EL FORMULARIO PARA EL USUARIO</h1>
+	    	
+
 	  </div>
 	</div>
-
-
 </body>
 </html>

@@ -1,3 +1,4 @@
+// script para el modal
 $(document).ready(function(){
   console.log("Documento listo");
 

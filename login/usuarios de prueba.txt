@@ -1,0 +1,38 @@
+USUARIOS TEMPORALES DE PRUEBA
+Nombre: Julio
+Codigo de Empleado: 0
+Contraseña: 0
+Rol: 0
+
+Nombre: Jorge
+Codigo de Empleado: 999999
+Contraseña: 0
+Rol: 9
+
+Nombre: Julio
+Codigo de Empleado: 999998
+Contraseña: 0
+Rol: 1
+
+Nombre: Julio
+Codigo de Empleado: 999997
+Contraseña: 0
+Rol: 2
+
+Nombre: Julio
+Codigo de Empleado: 999996
+Contraseña: 0
+Rol: 3
+
+Nombre: Julio
+Codigo de Empleado: 999996
+Contraseña: 0
+Rol: 4
+
+ROLES:
+0 - master
+1 - administrador
+2 - preparacion
+3 - supervisor
+4 - validacion
+9 - temporal - para pruebas

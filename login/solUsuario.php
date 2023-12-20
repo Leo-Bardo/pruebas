@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['form_enviado'])) {
         $usuario = $_POST["usuario"];
         $contrasena = $_POST["contrasena"];
 
+        //Verificar usuario ya que solo valida la contraseña y el usuario aunque este mal da acceso
         // Consultar la base de datos para verificar el usuario y contraseña
         $query = "SELECT * FROM usuarios WHERE codEmpleado = '$usuario' AND contrasena = '$contrasena'";
         $resultado = mysqli_query($con, $query);
@@ -33,21 +34,39 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['form_enviado'])) {
                 session_start();
                 $_SESSION['rolUsuario'] = $rolUsuario;
 
-                // Redirigir a la página correspondiente según el rol
-                switch ($rolUsuario){
-                    case "1":
-                        header("Location: consulta.php");
-                        exit();
-                    case "2":
-                        header("Location: admin.php");
-                        exit();
-                    // Agrega más casos según sea necesario
-                    default:
-                        echo "Error: Rol no reconocido";
-                        exit();
+                if ($rolUsuario == 9) {
+                    echo "OK";
+                    
+                }
+                else if ($rolUsuario == 0) {
+                    header("Location: validacionMenu.php");
+                }
+                else if ($rolUsuario == 0) {
+                    header("Location: validacionMenu.php");
+                }
+                else if ($rolUsuario == 0) {
+                    header("Location: validacionMenu.php");
+                }
+                else if ($rolUsuario == 0) {
+                    header("Location: validacionMenu.php");
                 }
 
+                // Redirigir a la página correspondiente según el rol
+                // switch ($rolUsuario){
+                //     case "0":
+                //         header("Location: master.php");
+                //         exit();
+                //     case "9":
+                //         header("Location: consulta.php");
+                //         exit();
+                //     // Agrega más casos según sea necesario
+                //     default:
+                //         echo "Error: Rol no reconocido";
+                //         exit();
+                // }
+
             } else {
+                //revisar presentación de respuesta para credenciales incorrectas
                 // echo "<script>
                 // alert "hola";
                 // </script>";
@@ -66,6 +85,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['form_enviado'])) {
     // Si no es una solicitud POST, devolver un mensaje de error
     echo "Error: Solicitud no válida";
 }
-
-
 ?>

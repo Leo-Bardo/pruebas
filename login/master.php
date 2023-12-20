@@ -13,9 +13,9 @@ $rolUsuario = isset($_SESSION['rolUsuario']) ? $_SESSION['rolUsuario'] : null;
   <!-- Contenido del cuerpo de la página -->
 
 
-	<?php if ($rolUsuario === 'admin'): ?>
+	<?php if ($rolUsuario === '0'): ?>
 	  <button id="btnAdmin">Botón de Administrador</button>
-	<?php elseif ($rolUsuario === 'usuario_normal'): ?>
+	<?php elseif ($rolUsuario === '9'): ?>
 	  <button id="btnUsuarioNormal">Botón de Usuario Normal</button>
 	<?php else: ?>
 		<h1>El Usuario no existe</h1>

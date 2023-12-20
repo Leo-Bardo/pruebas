@@ -1,45 +1,36 @@
 <?php
-include("../conexion.php");
-$con = conectar();
-?>
+   include("../conexion.php");
+   $con = conectar();
+   ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Login Master</title>
-  <script src="../js/jquery-3.7.1.min.js"></script>
-</head>
-<body>
-  <form action="solUsuario.php" method="POST">
-    <div class="formUsuario">
-      <label for="usuario">Usuario</label>
-      <input type="text" id="usuario" name="usuario" placeholder="Ingresa Usuario">
-      <label for="contrasena">Contraseña</label>
-      <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa Contraseña">
-      <input type="submit" id="btnIngresar" value="Ingresar">
-          <input type="hidden" name="form_enviado" value="1">
-
-    </div>
-  </form>
- 
-</body>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Login Master</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="../js/jquery-3.7.1.min.js"></script>
+   </head>
+   <body>
+      <script src="scriptModal.js"></script>
+      <button id="openModalBtn">Abrir Modal</button>
+      <div id="myModal" class="modal">
+            <div class="modal-content">
+               <span class="close">&times;</span>
+               <form action="solUsuario.php" method="POST">
+                  <div class="formUsuario">
+                     <label for="usuario">Usuario</label>
+                     <input type="text" id="usuario" name="usuario" placeholder="Ingresa Usuario">
+                     <label for="contrasena">Contraseña</label>
+                     <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa Contraseña">
+                     <input type="submit" id="btnIngresar" value="Ingresar">
+                     <input type="hidden" name="form_enviado" value="1">
+                  </div>
+            </div>
+         </div>
+      </form>
+   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- RESERVADO PARA USO POSTERIOR -->
  <script>
