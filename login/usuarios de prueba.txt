@@ -36,3 +36,8 @@ ROLES:
 3 - supervisor
 4 - validacion
 9 - temporal - para pruebas
+
+
+
+
+ENRIQUE PEREZ -- BBVA
