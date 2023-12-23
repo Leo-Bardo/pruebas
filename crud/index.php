@@ -34,7 +34,7 @@ $queryusuarios = mysqli_query($con, "SELECT idUsuario,nombreUsuario FROM usuario
 }
 else
 {
-$queryusuarios = mysqli_query($con, "SELECT * FROM usuarios ORDER BY nombreUsuario asc");
+$queryusuarios = mysqli_query($con, "SELECT * FROM usuarios ORDER BY idUsuario asc");
 }
         $numerofila = 0;
         while($mostrar = mysqli_fetch_array($queryusuarios)) 
