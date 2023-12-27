@@ -18,7 +18,7 @@ else{
 </head>
 <body>
 		<script src="../js/jquery-3.7.1.min.js"></script>
-	<script src="script.js"></script>
+	<script src="scriptModal.js"></script>
 	<button id="openModalBtn">Abrir Modal</button>
 	<div id="myModal" class="modal">
 	  <div class="modal-content">
