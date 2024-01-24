@@ -1,6 +1,6 @@
 $(document).ready(function() {
     let contador = 1;
-
+// MODIFICAR SCRIPT PARA VALIDAR TODO EL FORMULARIO
     $("#enviarBtn").click(function() {
         // Obtener el valor del input
         const valorDato = $("#dato").val().trim();

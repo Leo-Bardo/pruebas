@@ -57,16 +57,28 @@ $con = conectar();
                 </select>
             </div>
             <br>
+    <script src="js/script.js"></script>
+    <div id="contador"><b>Número de Lote: </b></div>
+        <label for="etapaDos">Etapa 2 de Homogenización:</label>
+        <input type="number" id="etapaDos" name="etapaDos" required>
+        <label for="etapaDos">Etapa 1 de Homogenización:</label>
+        <input type="number" id="dato" name="dato" required>
+    </div>
+    <br>
+            <label for="valorHomogenizacion">Valor de Homogenización:</label>
+
+    <br>
             <!-- FIN TEMPORAL DEL DIV -->
-    <button type="button" id="enviarBtn">Enviar y Incrementar</button>
+    <button type="button" id="enviarBtn">GUARDAR</button>
+        <input type="submit" id="enviarBtn" value="FINALIZAR">
+
+        <button type="button" id="enviarBtn">OBSERVACIONES</button>
+
     <br>
 </form> 
-<script src="js/script.js"></script>
-
-    <div id="contador"><b>Número de Lote: </b></div>
-        <label for="dato">Dato:</label>
-        <input type="text" id="dato" name="dato" required>
-    </div>
+<!-- Registro de valores de presión de homogenización durante el proceso. -->
+<!-- Hora: VALOR PSI -->
 
 </body>
 </html>
+
