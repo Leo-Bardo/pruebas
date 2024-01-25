@@ -1,12 +1,16 @@
 body{
+	background-color: black;
+	color: white;
 	text-align: center;
+
 }
+
 input{
 	color: white;
 	background-color: red;
 	width: 120px;
 	height: 40px;
 }
-label{
-	
+a{
+	text-decoration: none;
 }
