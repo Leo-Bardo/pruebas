@@ -1,14 +1,10 @@
-body{
-	background-color: red;
-	text-align: center;
-	border: solid 1px;
-	border-top: solid 5px;
-	margin-bottom: 50%;
+/* Estilo para el botón de incremento */
+input[type=number]::-webkit-inner-spin-button {
+    color: blue !important;
 }
-input{
-	margin: 120px;
-	width: 150px;
-}
-quantity{
-	
+
+/* Estilo para el área que rodea el botón de incremento */
+input[type=number]::-webkit-outer-spin-button {
+/*    -webkit-appearance: none;*/
+    margin: 0;
 }

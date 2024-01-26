@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando Input Number</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<div>
-		<h1>Estilo Input Number</h1>
-	</div>
-	<span>
-		<input class=""quantity id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number" height="20px">
-	</span>
+    <div class="input-container">
+        <label for="numeroInput">Ingresa un número:</label>
+        <input type="number" id="numeroInput" class="styled-input" min="0" max="100" step="1">
+        <button id="mostrarNumero">Mostrar Número</button>
+
+    <div id="resultado">
+    	
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="numeroInput" name="cantidad" min="0" max="100" step="1">
 </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Input Number</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <label for="numeroInput">Ingresa un número:</label>
+    <input type="number" id="numeroInput">
+    <button id="mostrarNumero">Mostrar Número</button>
+
+    <div id="resultado"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> -->
