@@ -16,6 +16,9 @@
 		<div class="" align="center">
 			<a href="inputNumber/index.php" title=""><h1>2 - Estilo de Numero Incremento</h1></a>
 		</div>
+		<div class="" align="center">
+			<a href="alertas/index.php" title=""><h1>2 - Configuracion de Alertas con SweetAlert</h1></a>
+		</div>
 	</div>
 </body>
 </html>
