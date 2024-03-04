@@ -17,7 +17,10 @@
 			<a href="inputNumber/index.php" title=""><h1>2 - Estilo de Numero Incremento</h1></a>
 		</div>
 		<div class="" align="center">
-			<a href="alertas/index.php" title=""><h1>2 - Configuracion de Alertas con SweetAlert</h1></a>
+			<a href="alertas/index.php" title=""><h1>3 - Configuracion de Alertas con SweetAlert</h1></a>
+		</div>
+		<div class="" align="center">
+			<a href="sumaNumerosJS/index.php" title=""><h1>4 - Suma de Números JS</h1></a>
 		</div>
 	</div>
 </body>
