@@ -22,6 +22,9 @@
 		<div class="" align="center">
 			<a href="sumaNumerosJS/index.php" title=""><h1>4 - Suma de Números JS</h1></a>
 		</div>
+		<div class="" align="center">
+			<a href="alineacionDiv/index.html" title=""><h1>5 - Alineación de Divs</h1></a>
+		</div>
 	</div>
 </body>
 </html>
