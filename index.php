@@ -25,6 +25,12 @@
 		<div class="" align="center">
 			<a href="alineacionDiv/index.html" title=""><h1>5 - Alineación de Divs</h1></a>
 		</div>
+		<div class="" align="center">
+			<a href="ejerciciosLogica/ejerciciosLogica.md" title=""><h1>6 - Ejercicios de Lógica</h1></a>
+		</div>
+		<div class="" align="center">
+			<a href="dataList/index.php" title=""><h1>7 - Agregar Datos desde DataList</h1></a>
+		</div>
 	</div>
 </body>
 </html>
