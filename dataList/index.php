@@ -30,7 +30,8 @@
         }
         ?>
     </datalist>
-
+<br>
+<br>
     <label for="materiaPrima">MATERIA PRIMA:</label>
     <input type="text" id="materiaPrima" name="materiaPrima" list="materiasPrimas">
     <datalist id="materiasPrimas">
@@ -42,7 +43,10 @@
         }
         ?>
     </datalist>
-    <label>UNIDAD<input type="text" name="unidad" id="unidad" value=""></label>
+    <label>COMPLEMENTO: <input type="text" name="complemento" id="complemento" value=""></label>
+<br>
+<br>
+    <label>UNIDAD: <input type="text" name="unidad" id="unidad" value=""></label>
 
     <button type="button" id="agregar">AGREGAR</button>
 </form>
@@ -52,12 +56,7 @@
         <tr>
             <th colspan="3">PARAMETROS PARA REPORTE DIARIO DE PREPARACIÓN</th>
         </tr>
-        <tr>
-            <td>MATERIA PRIMA</td>
-            <td>ACCIÓN</td>
-            <td>UNIDAD</td>
 
-        </tr>
     </thead>
     <tbody id="cuerpoTabla">
     </tbody>
@@ -67,41 +66,38 @@ document.addEventListener("DOMContentLoaded", function() {
     const formulario = document.getElementById("formulario");
     const parametroInput = document.getElementById("parametro");
     const materiaPrimaInput = document.getElementById("materiaPrima");
-    const unidadInput = document.getElementById("unidad")
+    const complementoInput = document.getElementById("complemento");
+    const unidadInput = document.getElementById("unidad");
     const agregarBtn = document.getElementById("agregar");
     const cuerpoTabla = document.getElementById("cuerpoTabla");
-
 
     agregarBtn.addEventListener("click", function() {
         const valorParametro = parametroInput.value;
         const valorMateriaPrima = materiaPrimaInput.value;
+        const valorComplemento = complementoInput.value;
         const valorUnidad = unidadInput.value;
 
         // Crear una nueva fila en la tabla y agregar los valores seleccionados
         const nuevaFila = document.createElement("tr");
 
-        // Agregar primera columna con el valor de parametro
-        const celdaParametro = document.createElement("td");
-        celdaParametro.textContent = valorParametro;
-        nuevaFila.appendChild(celdaParametro);
+        // Concatenar los valores en una sola cadena
+        const contenidoCelda = valorParametro + " " + valorMateriaPrima  + " " + valorComplemento + " " + valorUnidad;
 
-        // Agregar segunda columna con el valor de materiaPrima
-        const celdaMateriaPrima = document.createElement("td");
-        celdaMateriaPrima.textContent = valorMateriaPrima;
-        nuevaFila.appendChild(celdaMateriaPrima);
-
-        const celdaUnidad = document.createElement("td");
-        celdaUnidad.textContent = valorUnidad;
-        nuevaFila.appendChild(celdaUnidad)
+        // Agregar la celda con el contenido concatenado
+        const nuevaCelda = document.createElement("td");
+        nuevaCelda.textContent = contenidoCelda;
+        nuevaFila.appendChild(nuevaCelda);
 
         cuerpoTabla.appendChild(nuevaFila);
 
         // Limpiar los inputs después de agregar los valores a la tabla
         parametroInput.value = "";
         materiaPrimaInput.value = "";
-        unidadInput = "";
+        complementoInput.value = "";
+        unidadInput.value = "";
     });
 });
+
 
 </script>
 </body>
