@@ -31,6 +31,9 @@
 		<div class="" align="center">
 			<a href="dataList/index.php" title=""><h1>7 - Agregar Datos desde DataList</h1></a>
 		</div>
+		<div class="" align="center">
+			<a href="asincronia/index.php" title=""><h1>8 - Asincronia con JS</h1></a>
+		</div>
 	</div>
 </body>
 </html>
