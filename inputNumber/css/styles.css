@@ -1,0 +1,14 @@
+body{
+	background-color: red;
+	text-align: center;
+	border: solid 1px;
+	border-top: solid 5px;
+	margin-bottom: 50%;
+}
+input{
+	margin: 120px;
+	width: 150px;
+}
+quantity{
+	
+}
