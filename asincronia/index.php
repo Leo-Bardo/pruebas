@@ -7,7 +7,7 @@
 </head>
 <body>
   <div>
-      <label>INGRESAR EL VALOR: <input type="text" id="valorUno" value=""></label>
+      <label>: <input type="text" id="valorUno" value=""></label>
       <input type="submit" value="ACEPTAR" onclick="clikear()">
       <input type="button" value="SALIR" onclick="location.href='../index.php'">
       <label id="valorUnoEtiqueta"></label>
