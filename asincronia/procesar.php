@@ -12,11 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Procesar el valor como desees
         // Por ejemplo, guardarlo en un archivo de registro
-        file_put_contents('log.txt', $valorIngresado . "sda" . PHP_EOL, FILE_APPEND);
-
-
-
-
+        file_put_contents('log.txt', $valorIngresado . " cualquier mensaje concatenado." . PHP_EOL, FILE_APPEND);
         
         // Devolver una respuesta indicando que se recibió el valor
         echo json_encode(['success' => true, 'message' => 'Valor recibido correctamente']);
