@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Calculadora</title>
+</head>
+<body>
+<div class="contenedor">
+	<label>Hola Naomi - Calculadora</label>
+	<br><br>
+	<label>Número Uno: <input type="text" id="numeroUno" placeholder="ingresa valor" name="" value=""></label>
+	<br>	<br>
+	<label>Número Dos: <input type="text" id="numeroDos" name="" placeholder="ingresa valor" value=""></label>
+	<br>
+	<input type="button" id="boton" name="" value="SUMAR" onclick="sumar()">
+</div>
+
+
+	<script>
+		function sumar(){
+			var numUno = parseFloat(document.getElementById('numeroUno').value);
+			var numDos = parseFloat(document.getElementById('numeroDos').value);
+
+			var resultado = numUno + numDos;
+			console.log(resultado)
+
+		}
+	</script>
+
+
+</body>
+</html>

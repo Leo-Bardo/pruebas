@@ -34,6 +34,9 @@
 		<div class="" align="center">
 			<a href="asincronia/index.php" title=""><h1>8 - Asincronia con JS</h1></a>
 		</div>
+		<div class="" align="center">
+			<a href="xpl/index.html" title=""><h1>9 - SUMA</h1></a>
+		</div>
 	</div>
 </body>
 </html>

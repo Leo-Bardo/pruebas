@@ -1,0 +1,11 @@
+#boton{
+	background-color: red;
+	width: 20%;
+	height: ;
+}
+.contenedor{
+	border: solid 1px red;
+	width: 40%;
+	align-items: center;
+	display: block;
+}

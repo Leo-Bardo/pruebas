@@ -43,7 +43,7 @@
             }
         }
 
-        // Escuchar el evento de cambio en los campos de entrada y llamar a la función sumar()
+        Escuchar el evento de cambio en los campos de entrada y llamar a la función sumar()
         inputNumeroUno.addEventListener('input', sumar);
         inputNumeroDos.addEventListener('input', sumar);
 
