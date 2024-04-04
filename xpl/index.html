@@ -3,32 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Calculadora</title>
+	<title>Calculator</title>
 </head>
 <body>
-<div class="contenedor">
-	<label>Hola Naomi - Calculadora</label>
-	<br><br>
-	<label>Número Uno: <input type="text" id="numeroUno" placeholder="ingresa valor" name="" value=""></label>
-	<br>	<br>
-	<label>Número Dos: <input type="text" id="numeroDos" name="" placeholder="ingresa valor" value=""></label>
-	<br>
-	<input type="button" id="boton" name="" value="SUMAR" onclick="sumar()">
-</div>
-
-
-	<script>
-		function sumar(){
-			var numUno = parseFloat(document.getElementById('numeroUno').value);
-			var numDos = parseFloat(document.getElementById('numeroDos').value);
-
-			var resultado = numUno + numDos;
-			console.log(resultado)
-
-		}
-	</script>
-
-
+	<h2>Ejemplo de suma de dos numeros</h2>
+	<label>Ingresa el primer numero: <input type="text" id="numUno" name="" value=""></label>
+<br><br>
+	<label>Ingresa el segundo numero: <input type="text" name="" id="numDos" value=""></label>
+<br><br>
+	<input type="button" name="" value="SUMAR" onclick="sumar()">
+<span id="resultado"></span>
+<script>
+	function sumar(){
+		var primerNumrero = parseFloat(document.getElementById('numUno').value);
+		var segundoNumero = parseFloat(document.getElementById('numDos').value);
+		var suma = primerNumrero + segundoNumero;
+		console.log(suma);
+		var resultado = document.getElementById('resultado');
+		resultado.innerHTML = "el resultado de tu suma es igual a: " + suma;
+	}
+</script>
 </body>
 </html>
