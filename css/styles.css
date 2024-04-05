@@ -1,33 +1,36 @@
 body{
 	background-color: black;
 	color: white;
-/*	text-aslign: center;*/
+
+/*display: flex;*/
+align-items: center;
 }
 
-input{
-	color: red;
-	background-color: red;
-	width: 120px;
-	height: 40px;
+.title{
+	text-align: center;
+	border: solid 4px whitesmoke;
+	width: 99.18%;
 }
 a{
 	text-decoration: none;
 	color: white;
 }
 .container{
-	border: solid 1px gainsboro;
+/*	border: solid 1px gainsboro;*/
 	width: 100%;
 	height: 500px;
 	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 
 }
-.container div{
-	display: inline-block;
-	text-align: center;
-	border: solid 1px red;
-	width: 25%;
-	height: 50%;
-	display: grid;
-	align-items: center;
+.container .leftDiv{
+	border: solid 3px whitesmoke;
+	width: 99%;
 
+}
+.container .rightDiv{
+	border: solid 3px whitesmoke;
+	width: 99%;
 }
