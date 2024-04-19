@@ -1,0 +1,16 @@
+$json = '{
+  "arrayColores": [
+    {
+      "nombreColor": "rojo",
+      "valorHexadec": "#f00"
+    },
+    {
+      "nombreColor": "verde",
+      "valorHexadec": "#0f0"
+    },
+    {
+      "nombreColor": "azul",
+      "valorHexadec": "#00f"
+    }
+  ]
+}';

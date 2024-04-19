@@ -42,6 +42,9 @@
 				<div class="rightDiv" align="center">
 					<a href="json/index.html" title=""><h1>9 - JSON JavaScript/PHP</h1></a>
 				</div>
+				<div class="rightDiv" align="center">
+					<a href="concentrado/index.php" title=""><h1>10 - Concentrado de Formulas</h1></a>
+				</div>
 			</div>
 		</div>
 </body>
