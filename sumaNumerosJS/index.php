@@ -2,23 +2,35 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Suma de numeros</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Suma de dos números</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <h1>Suma de numeros</h1>
-    <label>Ingresa el primer Numero: <input type="text" id="numUno"></label>
-    <label>Ingresa el segundo Numero: <input type="text" id="numDos"></label>
-    <input type="button" value="sumar" name="" onclick="sumar()">
-    <span id="resultadoq"></span>
+    <h1 align="center">PROGRAMA PARA CALCULAR LA SUMA DE DOS NÚMEROS</h1>
+    <label style="font-size: 24px;">INGRESA EL PRIMER VALOR: <input type="text" id="numeroUno" name="" value="" style="font-size: 24px;"></label>
+    <br><br>
+    <label style="font-size: 24px;">INGRESA EL SEGUNDO VALOR: <input type="text" id="numeroDos" name="" value="" style="font-size: 24px;"></label>
+    <br><br>
+    <input type="button" value="SUMAR" onclick="sumar()" style="font-size: 24px; color: white; background-color: #F14A64;">
+    <span id="resul" style="background-color: darkred; color: white; font-size: 44px; border: solid 4px darkblue;"></span>
     <script>
         function sumar(){
-            var num1 = parseFloat(document.getElementById('numUno').value);
-            var num2 = parseFloat(document.getElementById('numDos').value);
-            resultado = num1 + num2;
-            console.log(resultado);
-            var rest = document.getElementById('resultadoq');
-            rest.innerHTML = "el valor de resultado: " + resultado;
+            var numUno = parseFloat(document.getElementById('numeroUno').value);
+            var numDos = parseFloat(document.getElementById('numeroDos').value);
+
+            suma = numUno + numDos;
+
+            var resultado = document.getElementById('resul');
+            resultado.innerHTML = 'El valor del resultado es igual a: ' + suma;
+
+console.log('El primer numero ingresado es:');
+console.log(numUno);
+console.log('El primer segundo ingresado es:');
+console.log(numDos);
+console.log('El resultado es igual a: ');
+console.log(suma);
+
         }
     </script>
 </body>
