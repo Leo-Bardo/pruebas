@@ -45,6 +45,9 @@
 				<div class="rightDiv" align="center">
 					<a href="concentrado/index.php" title=""><h1>10 - Concentrado de Formulas</h1></a>
 				</div>
+				<div class="rightDiv" align="center">
+					<a href="generaJson/index.html" title=""><h1>11 - Arreglo procesado con PHP</h1></a>
+				</div>
 			</div>
 		</div>
 </body>
