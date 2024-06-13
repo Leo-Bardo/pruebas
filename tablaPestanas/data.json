@@ -1,0 +1,17 @@
+<?php
+    $datos = [
+        "Inicio de Premezcla - ",
+        "Agua de proceso - 500 - °C",
+        "Pasta de Almendra LIGHT - 33.4290 - (Aqui va otro complemento)",
+        "CARGILL SEA SALT - 4.8624 - ",
+        "Inicio de Agitación (mínimo 5min.) - ",
+        "Inicio de Agitación - ",
+        "LECITINA DE SOYA YELKIN S - 3.039 - ",
+        "Sistema Gelana - 2000 - ",
+        "AGUA A TEMPERATURA AMBIENTE - 2000 - ",
+        "MANTEQUILLA SOLIDA DE ALMENDRA - 27.35 - ",
+        "CAÑA DE AZUCAR - 74.46 - ",
+        "CARBONATO DE CALCIO REVERTE - 9.117 - ",
+        "Fin de Agitación - "
+    ];
+?>

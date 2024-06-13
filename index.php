@@ -28,6 +28,9 @@
 				<div class="leftDiv" align="center">
 					<a href="alineacionDiv/index.html" title=""><h1>5 - Alineación de Divs</h1></a>
 				</div>
+				<div class="leftDiv" align="center">
+					<a href="tablaPestanas/index.php" title=""><h1>6 - Tabla con Pestañas</h1></a>
+				</div>
 			</div>
 			<div class="rightContainer">
 				<div class="rightDiv" align="center">
@@ -47,6 +50,9 @@
 				</div>
 				<div class="rightDiv" align="center">
 					<a href="generaJson/index.html" title=""><h1>11 - Arreglo procesado con PHP</h1></a>
+				</div>
+				<div class="rightDiv" align="center">
+					<a href="filtroBuscar/index.php" title=""><h1>12 - Filtro de Buscar</h1></a>
 				</div>
 			</div>
 		</div>
