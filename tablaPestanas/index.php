@@ -3,10 +3,10 @@ include '../conexion.php';
 include 'data.json';
 $con = conectar();
 
-$sqlCodigoLiberacion = "SELECT codigoLiberacion FROM liberacion_area";
+$sqlCodigoLiberacion = "SELECT codigoLiberacion FROM liberacion_area ORDER BY fecha, hora ASC LIMIT 1";
 $resultadoCodigoLiberacion = $con->query($sqlCodigoLiberacion);
 
-$sqlEquipoMetodo = "SELECT metodos.*, equipos.equipo FROM metodos INNER JOIN equipos ON metodos.equipo = equipos.idEquipo ORDER BY idMetodo  LIMIT 1";
+$sqlEquipoMetodo = "SELECT metodos.*, equipos.equipo FROM metodos INNER JOIN equipos ON metodos.equipo = equipos.idEquipo ORDER BY idMetodo LIMIT 1";
 
 $resultadoEquipoMetodo = $con->query($sqlEquipoMetodo);
 
