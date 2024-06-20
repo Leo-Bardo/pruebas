@@ -3,13 +3,38 @@ include '../conexion.php';
 include 'data.json';
 $con = conectar();
 
-$sqlCodigoLiberacion = "SELECT codigoLiberacion FROM liberacion_area ORDER BY fecha, hora ASC LIMIT 1";
-$resultadoCodigoLiberacion = $con->query($sqlCodigoLiberacion);
 
-$sqlEquipoMetodo = "SELECT metodos.*, equipos.equipo FROM metodos INNER JOIN equipos ON metodos.equipo = equipos.idEquipo ORDER BY idMetodo LIMIT 1";
 
+
+
+// CONTRUCCIÓN DE CONSULTA SQL PARA EQUIPOS A PARTIR DE METODOS
+$sqlEquipoMetodo = "SELECT metodos.*, equipos.equipo FROM metodos INNER JOIN equipos ON metodos.equipo = equipos.idEquipo ORDER BY idMetodo LIMIT 6";
 $resultadoEquipoMetodo = $con->query($sqlEquipoMetodo);
 
+// $valorFormula = "SELECT formula FROM formulas";
+// $idResultadoFormula = $con->query($valorFormula);
+// if ($idResultadoFormula->num_rows > 0) {
+//     while ($fila = $idResultadoFormula->fetch_assoc()){
+//         echo "<option value?'" . $fila["formula"] . "'>" . $fila["formula"] . "</option>";
+//     }
+// }
+
+
+
+// CONTRUCCIÓN DE CONSULTA JOIN PARA TRAER EL VALOR DE FORMULA DE TABLA METODOS Y COMPARARLA CON LA QUE CONTIENE LA SELECCIÓN DEL PRODUCTO
+
+
+
+
+// $valorProductoLiberado = "SELECT producto FROM liberacion_area";
+// $resultadoProductoLiberado = $con->query($valorProductoLiberado);
+// if ($resultadoProductoLiberado->num_rows > 0) {
+//     while ($fila = $resultadoProductoLiberado->fetch_assoc()){
+//         echo "<option value?'" . $fila["producto"] . "'>" . $fila["producto"] . "</option>";
+//     }
+// }
+
+// echo $resultadoFormula;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,12 +46,33 @@ $resultadoEquipoMetodo = $con->query($sqlEquipoMetodo);
 </head>
 <body>
                     <?php
-            if ($resultadoCodigoLiberacion->num_rows > 0) {
-                while ($fila = $resultadoCodigoLiberacion->fetch_assoc()) {
-                    echo "<option value='" . $fila["codigoLiberacion"] . "'>" . $fila["codigoLiberacion"] . "</option>";
-                }
-            }
-                    ?>
+                    $sqlProductoLiberacion = "SELECT producto FROM liberacion_area ORDER BY fecha DESC, hora DESC LIMIT 1";
+                    $resultadoProductoLiberacion = $con->query($sqlProductoLiberacion);
+
+                        if ($resultadoProductoLiberacion->num_rows > 0) {
+                            while ($fila = $resultadoProductoLiberacion->fetch_assoc()) {
+                                echo "<option value='" . $fila["producto"] . "'>" . $fila["producto"] . "</option>";
+
+                                $valorProductoLiberacion = $fila["producto"];
+                                echo $valorProductoLiberacion;
+                            }
+                        }
+
+
+// SELECT metodos.*, formulas.formula FROM metodos INNER JOIN formulas ON metodos.formula = formulas.idFormula ORDER BY idMetodo LIMIT 6
+// SELECT la.producto, p.producto FROM liberacion_area la INNER JOIN productos p ON la.producto = p.idProducto ORDER BY la.fecha DESC, la.hora DESC LIMIT 1
+
+
+
+                    $sqlFormulaMetodo = "SELECT arregloMetodo FROM metodos WHERE formula = $valorProductoLiberacion";
+                    $resultadoFormulaMetodo = $con->query($sqlFormulaMetodo);
+                        if ($resultadoFormulaMetodo->num_rows > 0) {
+                            while ($fila = $resultadoFormulaMetodo->fetch_assoc()) {
+                                echo "<option value='" . $fila["arregloMetodo"] . "'>" . $fila["arregloMetodo"] . "</option>";
+                            }
+                        }
+                                ?>
+
     <h1>DIARIO DE PREPARACIÓN</h1>
 
     <div class="tabsNav">
