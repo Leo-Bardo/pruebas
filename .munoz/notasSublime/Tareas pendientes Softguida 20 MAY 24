@@ -1,0 +1,112 @@
+Tareas pendientes Softguida 20 MAY 24
+-> ADMNISTRACIÓN
+* Crud
+-- Creación de CRUD para equipos (tanques, homogenizadores) 
+
+-> PREPARACIÓN
+*Liberacion de area
+-- Generación de "codigo de liberación de area", cambio de aspecto de codigo generado
+-- Cambio de ruta al aceptar el codigo de liberacion
+
+*Verificación de equipos
+-- Optimización en el flujo de información, se genera una tabla por cada codigo de liberación
+
+-> VALIDACIÓN
+*Verificacion de equipo
+-- Error al guardar los cambios, tiene que oprimir primero el boton editar si no los valores del checklist se borran.
+*Reportes
+-- Mejora en la apariencia visual de calendarios de consulta así como la lista que despliega los reportes
+*Metodos 
+-- Procesar parametros de formula con su identificador e incluyendo el arreglo generado en un archivo
+
+** Crear menu con los equipos que componen la formula
+
+REPORTES GENERADOR (PDF)
+
+-> BBDD
+Control de Homogenización
+** Conexión de tabla controlHomogenizacion
+
+NOTA: ANALISIS PROFUNDO DEL FLUJO DE INFORMACIÓN, LA COMODIDAD EN LA INTERACCIÓN DEL USUARIO PARA LA ALIMENTACIÓN DE DATOS, 
+
+Agregar 0s a la generación del codigo de liberación de área
+
+
+
+
+Preguntas Validación
+
+Quien crea las formulas?
+En el menu administración hay un crud que integra las formulas y permite que se realicen nuevas versones y altas de las mismas...
+En el menu validación (metodos) podemos crar la estructura de la formula por equipo despues de haberla dado de alta desde el menu de administarción
+
+31.5.24
+Brayan -
+-> ControlHomogenizacion
+-> Habilitación y Organiación de Menú UHT
+
+Braulio - Generación de JSON para las formulas
+->
+
+Julio
+-> 
+
+
+
+3 junio 2024
+Julio
+-> Reestructura de APP, organización. 
+Braulio
+-> Homogenización
+Brayan
+-> Reportes - 
+Nota: Esperar a mergear las ramas de ellos para posteriormente mergear la mia, tomar en cuenta que mis cambios son estructurales y no de funcionalidad, por lo tanto para que no existan conflictos en la ejecución de la app debe tomarse en cuenta la fusión de los cambios idividuales.
+
+
+----> REPORTES GENERADOS PARA EL ÁREA DE PREPARACIÓN
+
+✔ * PF153 - Liberación de Área (CHECKLIST DE LIBERACIÓN DE ÁREA DE PREPARACIÓN ANTES DE PRODUCIR)
+✔ * PF204	- Control de Homogenización (CONTROL DE HOMOGENIZACIÓN DE PRODUCTOS)
+* PF145 - (Lavado y revisión de Integridad de Equipos, Filtros y Trampas Magnéticas)
+✔* PF148 - Lavado Intermedio (REPORTE DE LAVADO INTERMEDIO DE EQUIPOS DE PREPARACIÓN)
+* PF182 - (Check list de verificación de equipos de preparación.)
+* TF-CM-NAT - Reporte Diario de Preparación (REPORTE DIARIO DE PREPARACIÓN)
+
+
+
+
+***** FORMATOS QUE QUEDAN PENDIENTES PORQUE SOLO SE ENCUENTRAN EN DIGITAL
+* PF190 - Lavado de maquina envasadora (LAVADO DE MÁQUINA ENVASADORA.)
+✔* PF211 - Reporte diario de limpieza (REPORTE DIARIO DE LIMPIEZA Y SANITIZACIÓN DE EQUIPOS PARA PRUEBAS)
+
+Generación de app para almacenamiento de ps
+
+***** INTERFACES
+
+Bayan - Equipos de procesos para producción
+Braulio
+
+
+
+C:\xampp\htdocs\softguida\panelControl\menuPreparacion\productoTrabajar\sanitizacionEquipos\generarReporte.php
+
+
+20/06/24
+Se creo tabla con comentarios para alimentar el MF043 - Checklist Equipos de Procesos para Producción
+___equi	so_produccion___
+----> *idEquiposProceso
+---->  equipoProceso
+---->  arregloProcesoProduccion
+---->  usuarioMantenimiento
+---->  supervisor
+
+Modificación del archivo README.md de proyecto
+
+
+
+
+4 julio 24
+-> Braulio
+* CheckList - Lavado intermedio
+-> Brayan
+* Alimentación de reporte - verificación de equipos

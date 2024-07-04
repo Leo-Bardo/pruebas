@@ -146,4 +146,3 @@ $resultadoEquipoMetodo = $con->query($sqlEquipoMetodo);
 <input type="button" name="" value="aceptar">
 </body>
 </html>
-

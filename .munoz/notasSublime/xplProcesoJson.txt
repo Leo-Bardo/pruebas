@@ -1,0 +1,65 @@
+***************** EJEMPLO DE LA OBTENICION DE DATOS DE JSON MEDIANTE PHP *****************
+
+<?php
+// JSON string
+$jsonString = '[
+    {
+        "homogenizador": "10",
+        "numLote": "4",
+        "horaInicio": "20:12",
+        "etapaUno": "2500",
+        "etapaDos": "500",
+        "valorHomogenizacion": "3000",
+        "observaciones": "",
+        "valoresTabla": [
+            {
+                "hora": "17:12",
+                "valor": "2000"
+            },
+            {
+                "hora": "17:12",
+                "valor": "4000"
+            }
+        ]
+    }
+]';
+
+// Decodificar el JSON a un array asociativo de PHP
+$dataArray = json_decode($jsonString, true);
+
+// Verificar si la decodificación fue exitosa
+if (json_last_error() === JSON_ERROR_NONE) {
+    // Iterar sobre el array y mostrar los valores
+    foreach ($dataArray as $item) {
+        echo "Homogenizador: " . $item['homogenizador'] . "<br>";
+        echo "Número de Lote: " . $item['numLote'] . "<br>";
+        echo "Hora de Inicio: " . $item['horaInicio'] . "<br>";
+        echo "Etapa Uno: " . $item['etapaUno'] . "<br>";
+        echo "Etapa Dos: " . $item['etapaDos'] . "<br>";
+        echo "Valor Homogenización: " . $item['valorHomogenizacion'] . "<br>";
+        echo "Observaciones: " . $item['observaciones'] . "<br>";
+
+        // Iterar sobre valoresTabla si no está vacío
+        if (!empty($item['valoresTabla'])) {
+            echo "Valores Tabla:<br>";
+            foreach ($item['valoresTabla'] as $valor) {
+                echo "- Hora: " . $valor['hora'] . ", Valor: " . $valor['valor'] . "<br>";
+            }
+        }
+        
+        echo "<hr>";
+    }
+} else {
+    // Mostrar mensaje de error
+    echo "Error al decodificar el JSON: " . json_last_error_msg();
+}
+
+// Codificar un array a JSON
+$newArray = [
+    'status' => 'success',
+    'data' => $dataArray
+];
+$jsonOutput = json_encode($newArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+echo "<pre>" . $jsonOutput . "</pre>";
+?>
