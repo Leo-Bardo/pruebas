@@ -1,0 +1,6 @@
+Este proyecto se crea con la tecnologia electron (framework javascript)
+* Creamos una carpeta donde almacenaremos nuestro proyecto
+* npm init -y //nuevo proyecto npm
+* npm install electron --save-dev //instalar paquetes json y modules
+* crear carpeta src/index.html y main.js
+* Configuración de package.json, apuntar app a carpeta main.js, crear 
