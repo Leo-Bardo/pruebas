@@ -1,60 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="css/styles.css">
+    <title>Usando highcharts </title>
+    <meta charset="utf-8" />
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  
+    
 </head>
 <body>
-	<div class="title">
-		<h1>MENÚ PARA PRUEBAS</h1>
-		<h2>LINKS</h2>
-	</div>
-		<div class="container" align="center">
-			<div class="leftContainer">
-				<div class="leftDiv" align="center">
-					<a href="xplJS" title=""><h1>1 - Incrementar Etiquetas con JQuery</h1></a>
-				</div>
-				<div class="leftDiv" align="center">
-					<a href="inputNumber/index.php" title=""><h1>2 - Estilo de Numero Incremento</h1></a>
-				</div>
-				<div class="leftDiv" align="center">
-					<a href="alertas/index.php" title=""><h1>3 - Configuracion de Alertas con SweetAlert</h1></a>
-				</div>
-				<div class="leftDiv" align="center">
-					<a href="sumaNumerosJS/index.php" title=""><h1>4 - Suma de Números JS</h1></a>
-				</div>
-				<div class="leftDiv" align="center">
-					<a href="alineacionDiv/index.html" title=""><h1>5 - Alineación de Divs</h1></a>
-				</div>
-				<div class="leftDiv" align="center">
-					<a href="tablaPestanas/index.php" title=""><h1>6 - Tabla con Pestañas</h1></a>
-				</div>
-			</div>
-			<div class="rightContainer">
-				<div class="rightDiv" align="center">
-					<a href="ejerciciosLogica/ejerciciosLogica.md" title=""><h1>6 - Ejercicios de Lógica</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="dataList/index.php" title=""><h1>7 - Agregar Datos desde DataList</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="asincronia/index.php" title=""><h1>8 - Asincronia con JS</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="json/index.html" title=""><h1>9 - JSON JavaScript/PHP</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="concentrado/index.php" title=""><h1>10 - Concentrado de Formulas</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="generaJson/index.html" title=""><h1>11 - Arreglo procesado con PHP</h1></a>
-				</div>
-				<div class="rightDiv" align="center">
-					<a href="filtroBuscar/index.php" title=""><h1>12 - Filtro de Buscar</h1></a>
-				</div>
-			</div>
-		</div>
+   <div id="grafica"></div>
+    
+    <script>
+     $(function($){
+         $('#grafica').highcharts({
+             title:{text:'Nuestra primera gráfica'},
+             xAxis:{categories:['2002','2004','2015']},
+             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:1,color:'#808080'}]},
+             tooltip:{valueSuffix:'%'},
+             legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
+             series:[{type: 'column',name: 'Java',data: [25,23, 21]}, 
+             {name: 'C',data: [20,18, 19]}, 
+             {type: 'column',name: 'C++',data: [15, 17,11]}, 
+             {type: 'spline',name: 'C#',data: [0, 4, 4]},
+             {name: 'Objective-C',data: [0,1, 1.5]}
+           ],
+             plotOptions:{line:{dataLabels:{enabled:true}}}
+         });
+     });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Usando highcharts </title>
+    <meta charset="utf-8" />
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  
+    
+</head>
+<body>
+   <div id="grafica"></div>
+    
+    <script>
+     $(function($){
+         $('#grafica').highcharts({
+             title:{text:'Nuestra primera gráfica'},
+             xAxis:{categories:['2002','2004','2015']},
+             yAxis:{title:'Porcentaje %',plotLines:[{value:0,width:1,color:'#808080'}]},
+             tooltip:{valueSuffix:'%'},
+             legend:{layout:'vertical',align:'right',verticalAlign:'middle',borderWidth:0},
+             series:[{type: 'column',name: 'Java',data: [25,23, 21]}, 
+             {name: 'C',data: [20,18, 19]}, 
+             {type: 'column',name: 'C++',data: [15, 17,11]}, 
+             {type: 'spline',name: 'C#',data: [0, 4, 4]},
+             {name: 'Objective-C',data: [0,1, 1.5]}
+           ],
+             plotOptions:{line:{dataLabels:{enabled:true}}}
+         });
+     });
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico con HTML y Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Gráfico de ejemplo</h2>
+    <canvas id="miGrafico" width="400" height="200"></canvas>
+
+    <script>
+        // Datos para el gráfico
+        const data = {
+            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+            datasets: [{
+                label: 'Ventas',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configuración del gráfico
+        const config = {
+            type: 'bar', // Cambia a 'line', 'pie', 'doughnut', etc. para otros tipos de gráficos
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Renderiza el gráfico
+        const miGrafico = new Chart(
+            document.getElementById('miGrafico'),
+            config
+        );
+    </script>
 </body>
 </html>
